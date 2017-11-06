@@ -9,17 +9,23 @@ image:
 
 ## BIOS
 
+<figure>
+	<img src="/images/myself.jpg" alt="image">
+	<figcaption>Me at Pixel's Camp Event</figcaption>
+</figure>
+
 Hey!
 My name is Filipe Monteiro, also known as **Pi** (yes, THAT π). I was born in 1998, February 28, at Guimarães, Portugal. Right now i am studying "Software Engineering" at Minho University in Braga, Portugal, currently on my second year (of five, still  a loooooong way). I gained my passion for programming and computer science when i was around 14 years old, where i learned a basic language, Pascal, until i could not take it anymore (being alone on it was hard). So, after ending High School i immediatly knew what i wanted to do in the future: PROGRAMMING.
 
-<figure>
-	<img src="/images/meme.jpg" alt="image">
-</figure>
 
 Right now my tastes rest on Security, Networking-Security, etc, as well as software making. Gotta love both sides, uhn?
 
 Oh, and i also played (wished i could still play, but time passes and work don't let do it again...) piano for around 8 years, all learned by myself. If for some reason you want to check some of my work on music, be sure to see a [**few of my videos**](https://www.youtube.com/user/Pimonteiro1/videos/).
 
+<figure>
+	<img src="/images/meme.jpg" alt="image">
+	<figcaption>Concert i gave with my band a few years ago</figcaption>
+</figure>
 
 ## Current Knowledge:
 

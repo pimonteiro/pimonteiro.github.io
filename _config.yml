@@ -1,7 +1,7 @@
 # Site wide configuration
 
 title: Site Title
-locale: pt_PT
+locale: en-US
 description: My products website
 logo: logo.jpg
 search: true

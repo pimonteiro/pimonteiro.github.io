@@ -18,7 +18,7 @@ image:
 </figure>
 
 Hey!
-My name is Filipe Monteiro, also known as **Pi** (yes, THAT π). I was born in 1998, February 28, at Guimarães, Portugal. Right now i am studying "Software Engineering" at Minho University in Braga, Portugal, and I am currently on my second year (of five, still  a loooooong way).
+My name is Filipe Monteiro, also known as **Pi** (yes, **THAT** π). I was born in 1998, February 28, at Guimarães, Portugal. Right now i am studying "Software Engineering" at Minho University in Braga, Portugal, and I am currently on my second year (of five, still  a loooooong way).
 
 I gained my passion for programming and computer science when i was around 14 years old, where i learned a basic language, Pascal, until it became to complex for me to continue (learning it without any help was hard). So, after ending High School i immediatly knew what i wanted to do in the future: PROGRAMMING.
 

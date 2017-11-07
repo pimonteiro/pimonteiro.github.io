@@ -18,9 +18,9 @@ image:
 </figure>
 
 Hey!
-My name is Filipe Monteiro, also known as **Pi** (yes, **THAT** π). I was born in 1998, February 28, at Guimarães, Portugal. Right now i am studying "Software Engineering" at Minho University in Braga, Portugal, and I am currently on my second year (of five, still  a loooooong way).
+My name is Filipe Monteiro, also known as **Pi** (yes, **THAT** π). I was born in 1998, February 28, at Guimarães, Portugal. Right now I am studying "Software Engineering" at Minho University in Braga, Portugal, and I am currently on my second year (total of five, still  a loooooong way).
 
-I gained my passion for programming and computer science when i was around 14 years old, where i learned a basic language, Pascal, until it became to complex for me to continue (learning it without any help was hard). So, after ending High School i immediatly knew what i wanted to do in the future: PROGRAMMING.
+I gained my passion for programming and computer science when I was around 14 years old, where I learned a basic language, Pascal, until it became to complex for me to continue (learning it without any help was hard). So, after ending High School I immediatly knew what I wanted to do in the future: PROGRAMMING.
 
 By the way, check some of my [projects](https://github.com/pimonteiro?tab=repositories)!!
 
@@ -29,11 +29,11 @@ By the way, check some of my [projects](https://github.com/pimonteiro?tab=reposi
 
 Right now my tastes rest on Security, Networking-Security, etc, as well as software making. Gotta love both sides, uhn?
 
-Oh, and i also used to play the piano for around 8 years (i still wish i could continue playing the piano, but time goes by and programming takes too much of it...), all learned by myself. If for some reason you want to check some of my previous work on music, be sure to see a [**few of my videos**](https://www.youtube.com/user/Pimonteiro1/videos/).
+Oh, and I also used to play the piano for around 8 years (I still wish I could continue playing the piano, but time goes by and programming takes too much of it...), all learned by myself. If for some reason you want to check some of my previous work on music, be sure to see a [**few of my videos**](https://www.youtube.com/user/Pimonteiro1/videos/).
 
 <figure>
 	<img src="/images/meme.jpg" alt="image">
-	<figcaption>Concert i gave with my band a few years ago</figcaption>
+	<figcaption>Concert I gave with my band a few years ago</figcaption>
 </figure>
 
 ## Current Knowledge:

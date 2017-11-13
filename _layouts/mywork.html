@@ -7,7 +7,7 @@
 {% include head.html %}
 </head>
 
-<body id="mywork" onload="getRepos()">
+<body id="mywork">
 
 {% include navigation.html %}
 
@@ -20,8 +20,6 @@
       </header>
       <div class="entry-content">
         {{ content }}
-        <ul id="repos">
-        </ul>
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
   </article>
@@ -58,9 +56,7 @@ function listRepos(data){
 	var listDiv = document.getElementById('repos');
 	var ul = document.createElement('ul');
 
-	console.log(parsedData.length);
 	for(var i=0; i < parsedData.length; i++){
-		console.log(parsedData[i]);
 	  var name = parsedData[i].name;
 	  var isFork = parsedData[i].fork;
 	  var url = parsedData[i].html_url;

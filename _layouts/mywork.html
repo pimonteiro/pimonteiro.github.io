@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
+
+<body id="mywork" onload="getRepos()">
+
+{% include navigation.html %}
+
+<div id="main" role="main">
+  <article class="entry">
+    {% if page.image.feature %}<img src="{{ site.url }}/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>{% if page.image.credit %}<p class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></p>{% endif %}{% endif %}
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
+      </header>
+      <div class="entry-content">
+        {{ content }}
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+{% include scripts.html %}
+
+<script>
+function getRepos(listRepos){
+  var xmlHttp = new XMLHttpResquest();
+  xmlHttp.onreadystatechange = function(){
+    if (xmlHttp.readyState === 4 && xmlHttp.status == 2){
+      listRepos(xmlHttp.responseText);
+    }
+  }
+  xmlHttp.open("GET","https://api.github.com/users/pimonteiro/repos", false);
+  xmlHttp.send(null);
+}
+
+function listRepos(data){
+  var parsedData = JSON.parse(data);
+  var listDiv = document.getElementById('repos');
+  var ul = document.createElement('ul');
+
+
+  var name;
+
+  for(var i=0; i < data.length; i++){
+    if(!i%2){
+      name = parsedData[i].name;
+    }
+    else{
+      var isFork = parsedData[i].fork;
+      var url = parsedData[i].html_url;
+      var description = parsedData[i].description;
+
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = url;
+
+      li.innerHTML = name + " --> " + description;
+      a.appendChild(li);
+      ul.appendChild(a);
+    }
+  }
+  listDiv.appendChild(ul);
+}
+
+</script>
+
+</body>
+</html>

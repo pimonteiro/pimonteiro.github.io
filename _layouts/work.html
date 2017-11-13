@@ -20,7 +20,7 @@
       </header>
       <div class="entry-content">
         {{ content }}
-        <ul id="repos">
+        <ul id="show">
         </ul>
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
@@ -36,6 +36,9 @@
 {% include scripts.html %}
 
 <script>
+
+var objectsData = [];
+
 function getRepos(){
 	var xhr = new XMLHttpRequest();
 
@@ -48,31 +51,60 @@ function getRepos(){
 		  listRepos(xhr.responseText);
 
 		}
-		else console.log(xhr.status);
+		else console.log(xhr.status, objectsData);
 	}
 
 }
 
 function listRepos(data){
 	var parsedData = JSON.parse(data);
-	var listDiv = document.getElementById('repos');
-	var ul = document.createElement('ul');
 
+	// Get data from response to an array
 	for(var i=0; i < parsedData.length; i++){
-	  var name = parsedData[i].name;
-	  var isFork = parsedData[i].fork;
-	  var url = parsedData[i].html_url;
-	  var description = parsedData[i].description;
-
-	  var li = document.createElement('li');
-	  var a = document.createElement('a');
-	  a.href = url;
-
-	  li.innerHTML = name + " --> " + description;
-	  a.appendChild(li);
-	  ul.appendChild(a);
+		var tmp = {
+			name: parsedData[i].name,
+			isFork: parsedData[i].fork,
+			stars: parsedData[i].stargazers_count,
+			url: parsedData[i].html_url,
+			description: parsedData[i].description
+		};
+		objectsData.push(tmp);
 	}
-	listDiv.appendChild(ul);
+	show_page("stars");
+}
+
+
+
+function show_page(srt){
+	if(srt == ""){
+		objectsData.sort(function(a,b){
+			var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  			var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+			if(nameA < nameB) return -1;
+			if(nameA >= nameB) return 1;
+		});
+	}
+	if(srt == "stars"){
+		objectsData.sort(function(a,b){
+			if(a.stars < b.stars) return 1;
+			if(a.starts >= b.stars) return -1;
+		});
+	}
+
+	var ul = document.getElementById('show');
+	ul.innerHTML = "";
+
+	for(var i = 0; i < objectsData.length; i++){
+
+		var li = document.createElement('li');
+		var a = document.createElement('a');
+		a.href = objectsData[i].url;
+
+		li.innerHTML = objectsData[i].name + " --> " + objectsData[i].description + " (With " + objectsData[i].stars + " stars)";
+		a.appendChild(li);
+		ul.appendChild(a);
+	}
+
 }
 
 </script>

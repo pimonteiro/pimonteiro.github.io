@@ -1,5 +1,5 @@
 To DO:
-- Lower image size
+- Lower images size
 - Let the user organize the list of my repositories
 - Create an article
 

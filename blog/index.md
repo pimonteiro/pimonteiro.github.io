@@ -5,8 +5,9 @@ excerpt: "An archive of blog posts sorted by date."
 search_omit: true
 ---
 
+
 {% if site.categories.blog == null %}
-  ## Nothing yet!
+  <h2 text-align:"center">Nothing yet!</h2>
 {% else %}
   <ul class="post-list">
   {% for post in site.categories.blog %}

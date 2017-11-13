@@ -6,9 +6,7 @@ search_omit: true
 ---
 
 {% if site.posts == null %}
-<article>
   <p>Nothing yet!</p>
-</article>
 {% else %}
   <ul class="post-list">
   {% for post in site.posts limit:10 %}

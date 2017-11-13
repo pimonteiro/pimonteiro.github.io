@@ -19,15 +19,13 @@
         <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
       </header>
       <div class="entry-content">
-        {{ content
-          <select onchange="show_page(this.value)">
-            <option value="">Alphabetical</option>
-            <option value="stars" selected>Stars</option>
-            <option value="commits">Commits</option>
-          </select>
+        {{ content }}
+        <select onchange="show_page(this.value)">
+          <option value="">Alphabetical</option>
+          <option value="stars" selected>Stars</option>
+        </select>
         <ul id="show">
         </ul>
-
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
   </article>
@@ -84,7 +82,7 @@ function listRepos(data){
 function show_page(srt){
 	if(srt == ""){
 		objectsData.sort(function(a,b){
-			var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+		    var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   			var nameB = b.name.toUpperCase(); // ignore upper and lowercase
 			if(nameA < nameB) return -1;
 			if(nameA >= nameB) return 1;

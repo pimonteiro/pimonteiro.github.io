@@ -1,6 +1,5 @@
 To DO:
 - Lower images size
-- Let the user organize the list of my repositories
 - Create an article
 
 # So Simple Theme

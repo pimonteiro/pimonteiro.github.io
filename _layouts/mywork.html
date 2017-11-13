@@ -33,47 +33,6 @@
 
 {% include scripts.html %}
 
-<script>
-function getRepos(){
-	var xhr = new XMLHttpRequest();
-
-	xhr.open("GET","https://api.github.com/users/pimonteiro/repos", true);
-	xhr.send(null);
-
-
-	xhr.onreadystatechange = function(){
-		if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)){
-		  listRepos(xhr.responseText);
-
-		}
-		else console.log(xhr.status);
-	}
-
-}
-
-function listRepos(data){
-	var parsedData = JSON.parse(data);
-	var listDiv = document.getElementById('repos');
-	var ul = document.createElement('ul');
-
-	for(var i=0; i < parsedData.length; i++){
-	  var name = parsedData[i].name;
-	  var isFork = parsedData[i].fork;
-	  var url = parsedData[i].html_url;
-	  var description = parsedData[i].description;
-
-	  var li = document.createElement('li');
-	  var a = document.createElement('a');
-	  a.href = url;
-
-	  li.innerHTML = name + " --> " + description;
-	  a.appendChild(li);
-	  ul.appendChild(a);
-	}
-	listDiv.appendChild(ul);
-}
-
-</script>
 
 </body>
 </html>

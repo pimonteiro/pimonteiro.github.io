@@ -7,7 +7,9 @@ search_omit: true
 
 
 {% if site.categories.blog == null %}
-  <h2 text-align:"center">Nothing yet!</h2>
+  <article>
+    <p>Nothing yet!</p>
+  </article>
 {% else %}
   <ul class="post-list">
   {% for post in site.categories.blog %}

@@ -22,6 +22,11 @@
         {{ content }}
         <ul id="show">
         </ul>
+          <select onchange="show_page(this.value)">
+            <option value="">Alphabetical</option>
+            <option value="stars" selected>Stars</option>
+            <option value="commits">Commits</option>
+          </select>
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
   </article>

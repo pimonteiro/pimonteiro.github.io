@@ -72,7 +72,8 @@ function listRepos(data){
 			url: parsedData[i].html_url,
 			description: parsedData[i].description
 		};
-		objectsData.push(tmp);
+    if(!isFork)
+		  objectsData.push(tmp);
 	}
 	show_page("stars");
 }

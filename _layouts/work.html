@@ -41,6 +41,8 @@
 
 <script>
 
+const Forked_toKeep = ["de-med","pimonteiro.github.io"];
+  
 var objectsData = [];
 
 function getRepos(){
@@ -72,8 +74,8 @@ function listRepos(data){
 			url: parsedData[i].html_url,
 			description: parsedData[i].description
 		};
-    if(!tmp.isFork)
-		  objectsData.push(tmp);
+    if(!tmp.isFork || (tmp.isFork && Forked_toKeep.includes(tmp.name)))
+      objectsData.push(tmp);
 	}
 	show_page("stars");
 }
